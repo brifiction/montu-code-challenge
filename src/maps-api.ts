@@ -8,7 +8,7 @@ export async function getPlaceAutocomplete(
   countrySet: COUNTRY_ISO_CODES = COUNTRY_ISO_CODES.AUS
 ) {
   const autocomplete = await axios.get(
-    `https://api.tomtom.com/search/2/search/${address}.json'`,
+    `https://api.tomtom.com/search/2/search/${address}.json`,
     {
       params: {
         key,
