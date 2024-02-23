@@ -13,6 +13,8 @@ Run `yarn`, then execute tests with the following script options:
 
 The fuzzy search results and API key (mostly) working as expected. However, there are some unusual properties missing from every returned result variation, mostly based on the provided address input.
 
-Regardless, further reading of the TomTom API documentation may reveal answers related to their unusual API response schema and its consistency - else, let's chalk it up to "expected behaviour" regarding the API response received for time being.
+~~Regardless, further reading of the TomTom API documentation may reveal answers related to their unusual API response schema and its consistency - else, let's chalk it up to "expected behaviour" regarding the API response received for time being.~~
+
+Case closed! Figured out the "nullable props", as some unique locations have or does not have these properties (for e.g. municipality does not apply to certain addresses duh lol).
 
 And of course, this will be elaborated further during the code challenge debrief session.
