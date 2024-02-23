@@ -1,7 +1,10 @@
+import { GetAutoCompleteDetailsResponseSchema } from "./lib/types";
 import { getPlaceAutocomplete } from "./maps-api";
 import { COUNTRY_ISO_CODES } from "./utils/constants";
 
-export async function getAutoCompleteDetails(address: any): Promise<any> {
+export async function getAutoCompleteDetails(
+  address: any
+): Promise<GetAutoCompleteDetailsResponseSchema[]> {
   const apiKey = process.env.TOMTOM_API_KEY;
   const countrySet = COUNTRY_ISO_CODES.AUS; // TODO This could be an environment var, func param etc
 

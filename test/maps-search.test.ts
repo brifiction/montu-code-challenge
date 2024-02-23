@@ -30,16 +30,16 @@ describe("Tomtom Places E2E Tests", () => {
       //   });
 
       const { address } = res[0];
-      //expect(firstRes).toHaveProperty("placeId"); // TODO Error: no such property in `address` prop, nullable prop based on country (e.g. US)?
-      //expect(firstRes).toHaveProperty("streetNumber");  // TODO Error: no such property in `address` prop, nullable prop based on country (e.g. US)?
       expect(res[0]).toHaveProperty("id");
       expect(address).toHaveProperty("streetName");
-      // expect(address).toHaveProperty("localName"); // TODO Error: no such property in `address` prop, nullable prop based on country (e.g. US)?
+      expect(address).toHaveProperty("countrySecondarySubdivision");
       expect(address).toHaveProperty("countrySubdivision");
+      expect(address).toHaveProperty("countrySubdivisionName");
+      expect(address).toHaveProperty("countrySubdivisionCode");
       expect(address).toHaveProperty("countryCode");
       expect(address).toHaveProperty("country");
+      expect(address).toHaveProperty("countryCodeISO3");
       expect(address).toHaveProperty("freeformAddress");
-      // expect(address).toHaveProperty("municipality"); // TODO Error: no such property in `address` prop, nullable prop based on country (e.g. US)?
     });
   });
 
