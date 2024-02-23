@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
-  "author": "",
+  "author": "Brian Ng <brianngchongeu@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.13.10",
