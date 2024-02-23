@@ -36,11 +36,13 @@ describe("Tomtom Places E2E Tests", () => {
 
     it("can fetch from the autocomplete api", async () => {
       const res = await getAutoCompleteDetails("Charlotte Street");
-      console.log(res[0]);
       const { address, id } = res[0]; // TODO don't forget `address` prop is accessed in first key item of array of objects..
       //expect(firstRes).toHaveProperty("placeId"); // TODO Error: no such property in `address` prop, nullable prop based on country (e.g. US)?
       //expect(firstRes).toHaveProperty("streetNumber");  // TODO Error: no such property in `address` prop, nullable prop based on country (e.g. US)?
       expect(res[0]).toHaveProperty("id");
+      expect(address).toHaveProperty("streetName");
+      expect(address).toHaveProperty("localName");
+      expect(address).toHaveProperty("countrySubdivision");
       expect(address).toHaveProperty("countryCode");
       expect(address).toHaveProperty("country");
       expect(address).toHaveProperty("freeformAddress");
