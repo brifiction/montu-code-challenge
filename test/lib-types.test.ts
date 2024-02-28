@@ -1,4 +1,5 @@
 import { GetAutoCompleteDetailsResponseSchema } from "../src/lib/types";
+import { COUNTRY_ISO_CODES } from "../src/utils/constants";
 
 describe("GetAutoCompleteDetailsResponseSchema", () => {
   // Sample data that adheres to the GetAutoCompleteDetailsResponse type
@@ -14,7 +15,7 @@ describe("GetAutoCompleteDetailsResponseSchema", () => {
       countrySubdivisionCode: "QLD",
       countryCode: "AU",
       country: "Australia",
-      countryCodeISO3: "AUS",
+      countryCodeISO3: COUNTRY_ISO_CODES.AUS,
       freeformAddress: "Charlotte Street, Central Coast QueenslandQueensland,",
     },
     position: {

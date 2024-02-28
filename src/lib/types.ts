@@ -12,9 +12,9 @@ export type GetAutoCompleteDetailsResponseSchema = {
     countrySubdivision: string;
     countrySubdivisionName: string;
     countrySubdivisionCode: string;
-    countryCode: COUNTRY_ISO_CODES;
+    countryCode: string;
     country: string;
-    countryCodeISO3: string;
+    countryCodeISO3: COUNTRY_ISO_CODES;
     freeformAddress: string;
     municipality?: string;
     municipalitySubdivision?: string;

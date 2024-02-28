@@ -12,6 +12,7 @@ export async function getAutoCompleteDetails(
   const res = getPlaceAutocomplete(apiKey, address, countrySet).then(
     (autocompleteResults) => autocompleteResults
   );
+
   // loop over and get details and map results
   return res;
 }
