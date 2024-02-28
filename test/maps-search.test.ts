@@ -50,11 +50,11 @@ describe("Tomtom Places E2E Tests", () => {
     });
 
     it("handles error", async () => {
-      expect(getPlaceAutocomplete(apiKey, "")).rejects.toThrow();
+      await expect(getPlaceAutocomplete(apiKey, "")).rejects.toThrow();
     });
 
     it("handles error if invalid api key", async () => {
-      expect(getPlaceAutocomplete(undefined, "")).rejects.toThrow();
+      await expect(getPlaceAutocomplete(undefined, "")).rejects.toThrow();
     });
   });
 });
